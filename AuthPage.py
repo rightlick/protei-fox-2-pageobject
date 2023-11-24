@@ -27,7 +27,7 @@ class Authorization(BasePage):
         return search_field
 
     def click_on_the_authorization_button(self, browser):
-        self.find_element(ProteiAuthLocators.LOCATOR_PROTEI_AUTH_BUTTON).click()
+        self.find_element(ProteiAuthLocators.LOCATOR_PROTEI_AUTH_BUTTON, 5).click()
         return Navigation(browser)
 
     def check_auth_page(self):

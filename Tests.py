@@ -48,3 +48,25 @@ def test_navigation_to_add_user(browser):
     assert element.get_attribute("class") == "uk-legend"
     assert element.text == "Добавление пользователя"
 
+
+def test_pairwase_1(browser):
+    protei_main_page = auth(browser)
+    protei_add_user_page = protei_main_page.click_on_the_add_user_dropdown(browser)
+    protei_add_user_page.enter_email("example@mail.com")
+    protei_add_user_page.enter_password("qwerty12345")
+    protei_add_user_page.enter_name("Иванушка")
+
+    # 0 - male  |   1 - female
+    protei_add_user_page.enter_sex(0)
+
+    # 1 or 2 for radio button
+    protei_add_user_page.enter_radio_button(1)
+
+    protei_add_user_page.enter_checkbox(1)
+    protei_add_user_page.enter_checkbox(2)
+    protei_add_user_page.enter_checkbox(3)
+
+    protei_add_user_page.click_on_the_add_button()
+    modal = protei_add_user_page.check_modal_success()
+    assert modal.get_attribute("class") == "uk-modal-dialog"
+
