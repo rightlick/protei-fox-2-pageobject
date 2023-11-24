@@ -9,7 +9,12 @@ class ProteiAuthLocators:
     LOCATOR_PROTEI_AUTH_PASSWORD = (By.ID, "loginPassword")
     LOCATOR_PROTEI_AUTH_BUTTON = (By.ID, "authButton")
 
-    LOCATOR_PROTEI_CHECK_AUTH = (By.CLASS_NAME, "uk-fieldset")
+    # SUCCESS
+    LOCATOR_PROTEI_AUTH_CHECK = (By.CLASS_NAME, "uk-fieldset")
+
+    # FAIL ALERT
+    LOCATOR_PROTEI_AUTH_ALERT_EMAIL = (By.ID, "emailFormatError")
+    LOCATOR_PROTEI_AUTH_ALERT_KEKEKE = (By.ID, "authAlertsHolder")
 
 
 class Authorization(BasePage):
@@ -27,9 +32,17 @@ class Authorization(BasePage):
         return search_field
 
     def click_on_the_authorization_button(self, browser):
-        self.find_element(ProteiAuthLocators.LOCATOR_PROTEI_AUTH_BUTTON, 5).click()
+        self.find_element(ProteiAuthLocators.LOCATOR_PROTEI_AUTH_BUTTON).click()
         return Navigation(browser)
 
     def check_auth_page(self):
-        auth = self.find_element(ProteiAuthLocators.LOCATOR_PROTEI_CHECK_AUTH).click()
+        auth = self.find_element(ProteiAuthLocators.LOCATOR_PROTEI_AUTH_CHECK)
         return auth
+
+    def check_alert_email(self):
+        alert = self.find_element(ProteiAuthLocators.LOCATOR_PROTEI_AUTH_ALERT_EMAIL)
+        return alert
+
+    def check_alert_fail(self):
+        alert = self.find_element(ProteiAuthLocators.LOCATOR_PROTEI_AUTH_ALERT_KEKEKE)
+        return alert

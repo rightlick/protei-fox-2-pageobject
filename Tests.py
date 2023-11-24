@@ -72,6 +72,15 @@ def test_pairwise_1(browser):
     assert button.get_attribute("class") == "uk-button uk-button-primary uk-modal-close"
     assert button.text == "OK"
 
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("example@mail.com")
+    protei_auth_page.enter_password("qwerty12345")
+    protei_main_page = protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_main_page.check_main_page()
+    assert element.get_attribute("class") == "uk-card-title"
+    assert element.text == "Добро пожаловать!"
+
 
 def test_pairwise_2(browser):
     protei_main_page = auth(browser)
@@ -96,6 +105,15 @@ def test_pairwise_2(browser):
     assert button.get_attribute("class") == "uk-button uk-button-primary uk-modal-close"
     assert button.text == "OK"
 
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("EXAmPlE@YAndEx.Ru")
+    protei_auth_page.enter_password("f#db96l%4~boA@")
+    protei_main_page = protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_main_page.check_main_page()
+    assert element.get_attribute("class") == "uk-card-title"
+    assert element.text == "Добро пожаловать!"
+
 
 def test_pairwise_3(browser):
     protei_main_page = auth(browser)
@@ -119,6 +137,15 @@ def test_pairwise_3(browser):
     button = protei_add_user_page.click_modal_button()
     assert button.get_attribute("class") == "uk-button uk-button-primary uk-modal-close"
     assert button.text == "OK"
+
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("8888@88.com")
+    protei_auth_page.enter_password("надёжныйпароль")
+    protei_main_page = protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_main_page.check_main_page()
+    assert element.get_attribute("class") == "uk-card-title"
+    assert element.text == "Добро пожаловать!"
 
 
 def test_pairwise_4(browser):
@@ -145,6 +172,15 @@ def test_pairwise_4(browser):
     assert button.get_attribute("class") == "uk-button uk-button-primary uk-modal-close"
     assert button.text == "OK"
 
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("москва@москва.рф")
+    protei_auth_page.enter_password("港口で難船")
+    protei_main_page = protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_main_page.check_main_page()
+    assert element.get_attribute("class") == "uk-card-title"
+    assert element.text == "Добро пожаловать!"
+
 
 def test_pairwise_5(browser):
     protei_main_page = auth(browser)
@@ -170,6 +206,15 @@ def test_pairwise_5(browser):
     assert button.get_attribute("class") == "uk-button uk-button-primary uk-modal-close"
     assert button.text == "OK"
 
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("admin@example")
+    protei_auth_page.enter_password("123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345")
+    protei_main_page = protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_main_page.check_main_page()
+    assert element.get_attribute("class") == "uk-card-title"
+    assert element.text == "Добро пожаловать!"
+
 
 def test_pairwise_6(browser):
     protei_main_page = auth(browser)
@@ -194,6 +239,15 @@ def test_pairwise_6(browser):
     button = protei_add_user_page.click_modal_button()
     assert button.get_attribute("class") == "uk-button uk-button-primary uk-modal-close"
     assert button.text == "OK"
+
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("postmaster@[123.123.123.123]")
+    protei_auth_page.enter_password("п")
+    protei_main_page = protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_main_page.check_main_page()
+    assert element.get_attribute("class") == "uk-card-title"
+    assert element.text == "Добро пожаловать!"
 
 
 def test_pairwise_7(browser):
@@ -221,6 +275,15 @@ def test_pairwise_7(browser):
     assert button.get_attribute("class") == "uk-button uk-button-primary uk-modal-close"
     assert button.text == "OK"
 
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("emailaddresss@example.com")
+    protei_auth_page.enter_password("latineca")
+    protei_main_page = protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_main_page.check_main_page()
+    assert element.get_attribute("class") == "uk-card-title"
+    assert element.text == "Добро пожаловать!"
+
 
 def test_pairwise_8(browser):
     protei_main_page = auth(browser)
@@ -243,6 +306,15 @@ def test_pairwise_8(browser):
     assert button.get_attribute("class") == "uk-button uk-button-primary uk-modal-close"
     assert button.text == "OK"
 
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("ivanov322gamer1@mail.ru")
+    protei_auth_page.enter_password("СВЕТЛАНА")
+    protei_main_page = protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_main_page.check_main_page()
+    assert element.get_attribute("class") == "uk-card-title"
+    assert element.text == "Добро пожаловать!"
+
 
 def test_pairwise_9_negative_empty_email(browser):
     protei_main_page = auth(browser)
@@ -261,6 +333,22 @@ def test_pairwise_9_negative_empty_email(browser):
 
     alert = protei_add_user_page.check_alert_fail_email()
     assert alert.get_attribute("class") == "uk-alert uk-alert-danger"
+
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("")
+    protei_auth_page.enter_password("7d F5v")
+    protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_auth_page.check_alert_email()
+    assert element.get_attribute("class") == "uk-alert uk-alert-danger"
+
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("")
+    protei_auth_page.enter_password("7d F5v")
+    protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_auth_page.check_alert_email()
+    assert element.get_attribute("class") == "uk-alert uk-alert-danger"
 
 
 def test_pairwise_10_negative_empty_password(browser):
@@ -283,6 +371,14 @@ def test_pairwise_10_negative_empty_password(browser):
     alert = protei_add_user_page.check_alert_fail_password()
     assert alert.get_attribute("class") == "uk-alert uk-alert-danger"
 
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("")
+    protei_auth_page.enter_password("7d F5v")
+    protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_auth_page.check_alert_fail()
+    assert element.get_attribute("class") == "uk-margin uk-form-row"
+
 
 def test_pairwise_11_negative_empty_name(browser):
     protei_main_page = auth(browser)
@@ -303,6 +399,14 @@ def test_pairwise_11_negative_empty_name(browser):
 
     alert = protei_add_user_page.check_alert_fail_name()
     assert alert.get_attribute("class") == "uk-alert uk-alert-danger"
+
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("")
+    protei_auth_page.enter_password("7d F5v")
+    protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_auth_page.check_alert_fail()
+    assert element.get_attribute("class") == "uk-margin uk-form-row"
 
 
 def test_pairwise_12_negative_long_password(browser):
@@ -329,6 +433,14 @@ def test_pairwise_12_negative_long_password(browser):
     assert button.get_attribute("class") == "uk-button uk-button-primary uk-modal-close"
     assert button.text == "OK"
 
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("")
+    protei_auth_page.enter_password("7d F5v")
+    protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_auth_page.check_alert_fail()
+    assert element.get_attribute("class") == "uk-margin uk-form-row"
+
 
 def test_pairwise_13_negative_long_email(browser):
     protei_main_page = auth(browser)
@@ -350,6 +462,14 @@ def test_pairwise_13_negative_long_email(browser):
 
     alert = protei_add_user_page.check_alert_fail_email()
     assert alert.get_attribute("class") == "uk-alert uk-alert-danger"
+
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("")
+    protei_auth_page.enter_password("7d F5v")
+    protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_auth_page.check_alert_email()
+    assert element.get_attribute("class") == "uk-alert uk-alert-danger"
 
 
 def test_pairwise_14_negative_long_name(browser):
@@ -377,6 +497,14 @@ def test_pairwise_14_negative_long_name(browser):
     assert button.get_attribute("class") == "uk-button uk-button-primary uk-modal-close"
     assert button.text == "OK"
 
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("")
+    protei_auth_page.enter_password("7d F5v")
+    protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_auth_page.check_alert_fail()
+    assert element.get_attribute("class") == "uk-margin uk-form-row"
+
 
 def test_pairwise_15_negative_invalid_email(browser):
     protei_main_page = auth(browser)
@@ -398,6 +526,14 @@ def test_pairwise_15_negative_invalid_email(browser):
 
     alert = protei_add_user_page.check_alert_fail_email()
     assert alert.get_attribute("class") == "uk-alert uk-alert-danger"
+
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("")
+    protei_auth_page.enter_password("7d F5v")
+    protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_auth_page.check_alert_email()
+    assert element.get_attribute("class") == "uk-alert uk-alert-danger"
 
 
 def test_pairwise_16_negative_invalid_email_without_at(browser):
@@ -421,3 +557,11 @@ def test_pairwise_16_negative_invalid_email_without_at(browser):
 
     alert = protei_add_user_page.check_alert_fail_email()
     assert alert.get_attribute("class") == "uk-alert uk-alert-danger"
+
+    protei_auth_page = Authorization(browser)
+    protei_auth_page.go_to_site()
+    protei_auth_page.enter_email("")
+    protei_auth_page.enter_password("7d F5v")
+    protei_auth_page.click_on_the_authorization_button(browser)
+    element = protei_auth_page.check_alert_email()
+    assert element.get_attribute("class") == "uk-alert uk-alert-danger"
