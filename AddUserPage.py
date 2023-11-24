@@ -31,7 +31,9 @@ class ProteiAddUserLocators:
 
     # ALERTS
     LOCAL_PROTEI_ADD_USER_ALERT_EMAIL = (By.ID, "emailFormatError")
+    LOCAL_PROTEI_ADD_USER_ALERT_PASSWORD = (By.ID, "blankPasswordError")
     LOCAL_PROTEI_ADD_USER_ALERT_NAME = (By.ID, "blankNameError")
+
 
 
 
@@ -113,3 +115,19 @@ class AddUser(BasePage):
     def click_modal_button(self):
         modal_button = self.find_element(ProteiAddUserLocators.LOCAL_PROTEI_ADD_USER_MODAL_BUTTON)
         return modal_button
+
+    def check_modal_fail(self):
+        modal = self.find_element(ProteiAddUserLocators.LOCAL_PROTEI_ADD_USER_MODAL)
+        return modal
+
+    def check_alert_fail_email(self):
+        modal = self.find_element(ProteiAddUserLocators.LOCAL_PROTEI_ADD_USER_ALERT_EMAIL)
+        return modal
+
+    def check_alert_fail_password(self):
+        modal = self.find_element(ProteiAddUserLocators.LOCAL_PROTEI_ADD_USER_ALERT_PASSWORD)
+        return modal
+
+    def check_alert_fail_name(self):
+        modal = self.find_element(ProteiAddUserLocators.LOCAL_PROTEI_ADD_USER_ALERT_NAME)
+        return modal
